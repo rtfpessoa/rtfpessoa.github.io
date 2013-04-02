@@ -8,7 +8,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css);
 
-body {
+html, body {
     /* Pattern from http://www.ubuntu.com/ */
     /* background: #fff url("http://www.ubuntu.com/static/u/img/patterns/background-dots-small.png"); */
     /* Lost Pattern */
@@ -16,6 +16,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
+    padding: 0;
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
 }
 a {
     color: #f3f3f3;
@@ -50,6 +56,7 @@ nav ul a li:hover {
 }
 #content {
     margin: 5% 0;
+    padding-bottom: 4%;
 }
 #content h1,
 #content h2 {
@@ -81,8 +88,7 @@ footer {
     bottom: 0;
     height: 4%;
     padding: 1% 1% 0;
-    position: fixed;
-    text-align: left;
+    position: absolute;
     width: 88%;
 }
 footer hr {
@@ -119,7 +125,7 @@ footer p {
         width: auto;
     }
     footer {
-        height: 8%;
+        height: 4%;
     }
 }
 
