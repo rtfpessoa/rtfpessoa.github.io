@@ -1,73 +1,84 @@
 /* Rodrigo Fernandes
-   v1.0 | 20130401
+   v1.0 | 20130402
    Author: mrfyda
+   Co-author: rtfpessoa
    License: none (public domain)
 */
 @import url(reset.css);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css);
 
 body {
-    background: url('XXX') no-repeat fixed center right/ cover transparent;
+    background-color: #cacaca;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
 }
+a {
+    color: #d3d7cf;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
 header {
     margin: 5% 0 0 0;
 }
-nav ul li {
-    background-color: rgba(0, 0, 0, 0.4);
+nav ul a li {
+    background-color: #f3f3f3;
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 2.0em;
     list-style-type: none;
-    padding-right: 5%;
-    width: 8%;
+    width: 15%;
+    padding: 0.5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey; 
 }
-nav ul li.active a{
-    color: #ddd;
+nav ul a li.active{
+    color: #ff6000;
 }
-nav ul li a {
-    color: #aaa;
+nav ul a li {
+    color: #000;
     text-decoration: none;
 }
-nav ul li a:hover {
-    color: #000;
-}
-@media all and (max-width: 1200px) {
-    nav ul li {
-        margin-bottom: 1%;
-        width: 18%;
-    }
-}
-@media all and (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 2%;
-        padding: 1%;
-        width: auto;
-    }
+nav ul a li:hover {
+    color: #ff6000;
 }
 #content {
-    padding-bottom: 5%;
+    margin: 5% 0;
 }
-#content > h1,
-#content > h2 {
+#content h1,
+#content h2 {
     color: #555;
     font-size: 2.8em;
-    margin: 5% 0 2% 0;
+    margin: 0 0 2% 0;
 }
-#content > h2 {
+#content h2 {
     font-size: 2.0em;
 }
-#content > p {
+#content p,
+#content ul li {
     font-size: 1.5em;
+}
+#content ul li a span {
+    position: absolute;
+    margin-top: 0.5em;
+}
+.portfolio-item {
+    padding: 2%;
+    width: 50%;
+}
+.portfolio-item img {
+    border: 1px solid #aaa;
 }
 footer {
     background-color: rgba(255, 255, 255, 0.7);
     bottom: 0;
     height: 4%;
-    padding: 0 1% 2%;
+    padding: 1% 1% 0;
     position: fixed;
+    text-align: left;
     width: 88%;
 }
 footer hr {
@@ -77,4 +88,45 @@ footer hr {
 footer p {
     color: #555;
     font-size: 0.9em;
+}
+@media all and (max-width: 1200px) {
+    nav ul li {
+        margin-bottom: 1%;
+        width: 15%;
+    }
+}
+@media all and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 2%;
+        padding: 0.5%;
+        width: auto;
+    }
+    #content {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5%;
+        margin-bottom: 17%;
+    }
+    #content h1 {
+        margin: 0 0 2% 0;
+    }
+    .portfolio-item {
+        margin: 0;
+        width: auto;
+    }
+    footer {
+        height: 8%;
+    }
+}
+
+.icon-2x {
+    color: #000;
+}
+
+.contacts ul li {
+    padding: 0.0% 0.5% 0.5% 0.5%;
+}
+
+.contacts ul li a span {
+    color: black;
 }

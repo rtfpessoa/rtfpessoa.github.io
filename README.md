@@ -1,4 +1,1 @@
-personal_page
-=============
-
-The is my personal web page source code
+This web page is based on a template developed with @mrfyda
