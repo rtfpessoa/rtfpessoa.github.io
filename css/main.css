@@ -90,13 +90,13 @@ footer p {
     font-size: 0.9em;
 }
 @media all and (max-width: 1200px) {
-    nav ul li {
+    nav ul a li {
         margin-bottom: 1%;
         width: 15%;
     }
 }
 @media all and (max-width: 600px) {
-    nav ul li {
+    nav ul a li {
         display: block;
         margin-bottom: 2%;
         padding: 0.5%;
