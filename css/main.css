@@ -7,8 +7,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 body {
-    background: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/62181_3911554394629_936562229_n.jpg') no-repeat top right;
-    background-size: 100%;
+    background: url('XXX') no-repeat fixed center right/ cover transparent;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
@@ -35,16 +34,12 @@ nav ul li a:hover {
     color: #000;
 }
 @media all and (max-width: 1200px) {
-
     nav ul li {
         margin-bottom: 1%;
         width: 18%;
     }
 }
 @media all and (max-width: 600px) {
-    body {
-        background-size: auto;
-    }
     nav ul li {
         display: block;
         margin-bottom: 2%;
