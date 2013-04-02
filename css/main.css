@@ -9,13 +9,16 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css);
 
 body {
-    background-color: #cacaca;
+    /* Pattern from http://www.ubuntu.com/ */
+    /* background: #fff url("http://www.ubuntu.com/static/u/img/patterns/background-dots-small.png"); */
+    /* Lost Pattern */
+    background: #fff url("../images/pattern1.png");
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
 }
 a {
-    color: #d3d7cf;
+    color: #f3f3f3;
     text-decoration: none;
 }
 img {
@@ -29,7 +32,7 @@ nav ul a li {
     display: inline-block;
     font-size: 2.0em;
     list-style-type: none;
-    width: 15%;
+    width: 18%;
     padding: 0.5%;
     border-style: solid;
     border-width: 1px;
@@ -50,7 +53,8 @@ nav ul a li:hover {
 }
 #content h1,
 #content h2 {
-    color: #555;
+    color: #000;
+    font-weight: bold;
     font-size: 2.8em;
     margin: 0 0 2% 0;
 }
@@ -73,7 +77,7 @@ nav ul a li:hover {
     border: 1px solid #aaa;
 }
 footer {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #f3f3f3;
     bottom: 0;
     height: 4%;
     padding: 1% 1% 0;
@@ -92,7 +96,7 @@ footer p {
 @media all and (max-width: 1200px) {
     nav ul a li {
         margin-bottom: 1%;
-        width: 15%;
+        width: 18%;
     }
 }
 @media all and (max-width: 600px) {
@@ -103,7 +107,7 @@ footer p {
         width: auto;
     }
     #content {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: #f3f3f3;
         padding: 5%;
         margin-bottom: 17%;
     }
