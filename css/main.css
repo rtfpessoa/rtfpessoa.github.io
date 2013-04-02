@@ -47,21 +47,25 @@ nav ul li a:hover {
         width: auto;
     }
 }
-body > h1,
-body > h2 {
+#content {
+    padding-bottom: 5%;
+}
+#content > h1,
+#content > h2 {
     color: #555;
     font-size: 2.8em;
     margin: 5% 0 2% 0;
 }
-body > h2 {
+#content > h2 {
     font-size: 2.0em;
 }
-body > p {
+#content > p {
     font-size: 1.5em;
 }
 footer {
     background-color: rgba(255, 255, 255, 0.7);
     bottom: 0;
+    height: 4%;
     padding: 0 1% 2%;
     position: fixed;
     width: 88%;
