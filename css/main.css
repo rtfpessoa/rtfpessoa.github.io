@@ -8,20 +8,21 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css);
 
-html, body {
-    /* Pattern from http://www.ubuntu.com/ */
-    /* background: #fff url("http://www.ubuntu.com/static/u/img/patterns/background-dots-small.png"); */
-    /* Lost Pattern */
-    background: #fff url("../images/pattern1.png");
+html {
+    height: 100%;
+}
+body {
+    background-attachment: fixed;
+    background-image: url('../images/background.jpg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
-    padding: 0;
-    height: 100%;
-}
-#wrapper {
-    min-height: 100%;
-    position: relative;
 }
 a {
     color: #f3f3f3;
@@ -31,9 +32,9 @@ img {
     max-width: 100%;
 }
 header {
-    margin: 5% 0 0 0;
+    margin: 2% 0 0 0;
 }
-nav ul a li {
+nav ul li {
     background-color: #f3f3f3;
     display: inline-block;
     font-size: 2.0em;
@@ -44,26 +45,29 @@ nav ul a li {
     border-width: 1px;
     border-color: grey; 
 }
-nav ul a li.active{
+nav ul li.active a{
     color: #ff6000;
 }
-nav ul a li {
+nav ul li a {
     color: #000;
+    display: block;
+    height: 100%;
     text-decoration: none;
+    width: 100%;
 }
-nav ul a li:hover {
+nav ul li a:hover {
     color: #ff6000;
 }
 #content {
     margin: 5% 0;
-    padding-bottom: 4%;
+    text-shadow: 0 0 0.05em #fff;
+    padding: 2%;
 }
 #content h1,
 #content h2 {
     color: #000;
     font-weight: bold;
     font-size: 2.8em;
-    margin: 0 0 2% 0;
 }
 #content h2 {
     font-size: 2.0em;
@@ -77,6 +81,7 @@ nav ul a li:hover {
     margin-top: 0.5em;
 }
 .portfolio-item {
+    background: #fff;
     padding: 2%;
     width: 50%;
 }
@@ -88,7 +93,8 @@ footer {
     bottom: 0;
     height: 4%;
     padding: 1% 1% 0;
-    position: absolute;
+    position: fixed;
+    text-align: left;
     width: 88%;
 }
 footer hr {
@@ -100,17 +106,20 @@ footer p {
     font-size: 0.9em;
 }
 @media all and (max-width: 1200px) {
-    nav ul a li {
+    nav ul li {
         margin-bottom: 1%;
-        width: 18%;
+        width: 25%;
     }
 }
 @media all and (max-width: 600px) {
-    nav ul a li {
+    nav ul li {
         display: block;
         margin-bottom: 2%;
         padding: 0.5%;
         width: auto;
+    }
+    nav ul li a {
+        padding: 0;
     }
     #content {
         background-color: #f3f3f3;
@@ -125,7 +134,7 @@ footer p {
         width: auto;
     }
     footer {
-        height: 4%;
+        height: 8%;
     }
 }
 
