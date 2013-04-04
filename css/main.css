@@ -23,6 +23,16 @@ body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
+    height: 100%;  
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -40px;
+}
+#push {
+    height: 30px;
 }
 a {
     color: #f3f3f3;
@@ -32,18 +42,15 @@ img {
     max-width: 100%;
 }
 header {
-    margin: 2% 0 0 0;
+    margin: 5% 0 0 0;
 }
 nav ul li {
     background: rgba(255, 255, 255, 0.5);
     display: inline-block;
-    font-size: 2.0em;
+    font-size: 1.5em;
     list-style-type: none;
-    width: 18%;
-    padding: 0.5%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: grey; 
+    width: 15%;
+    font-weight: bold;
 }
 nav ul li.active a{
     color: #ff6000;
@@ -52,6 +59,7 @@ nav ul li a {
     color: #000;
     display: block;
     height: 100%;
+    padding: 1em 5% 1em 1em;
     text-decoration: none;
     width: 100%;
 }
@@ -70,6 +78,7 @@ nav ul li a:hover {
     color: #000;
     font-weight: bold;
     font-size: 2.8em;
+    margin: 0 0 2% 0;
 }
 #content h2 {
     font-size: 2.0em;
@@ -90,19 +99,18 @@ nav ul li a:hover {
 }
 footer {
     background: rgba(255, 255, 255, 0.5);
-    bottom: 0;
-    height: 4%;
     padding: 1% 1% 0;
+    bottom: 0;
     position: fixed;
     text-align: left;
     width: 88%;
+    height: 30px;
 }
 footer hr {
     border-color: #aaa;
     border-style: dashed;
 }
 footer p {
-    color: #555;
     font-size: 0.9em;
 }
 @media all and (max-width: 1200px) {
@@ -111,24 +119,24 @@ footer p {
         width: 25%;
     }
     #content {
-        width: 100%;    
+        width: 90%;       
     }    
 }
 @media all and (max-width: 600px) {
     nav ul li {
         display: block;
         margin-bottom: 2%;
-        padding: 0.5%;
+        padding: 0.5em;
         width: auto;
     }
     nav ul li a {
         padding: 0;
     }
     #content {
-        margin-bottom: 17%;
-        padding: 3%;
-        background: rgba(255, 255, 255, 0.5);  
-        width: 100%;    
+        padding: 5%;
+        background: rgba(255, 255, 255, 0.5);    
+		margin-bottom: 17%;
+		width: 90%;
     }
     #content h1 {
         margin: 0 0 2% 0;
@@ -136,9 +144,6 @@ footer p {
     .portfolio-item {
         margin: 0;
         width: auto;
-    }
-    footer {
-        height: 8%;
     }
 }
 
