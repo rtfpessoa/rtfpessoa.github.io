@@ -123,8 +123,7 @@ footer p {
     #content {
         margin-bottom: 17%;
         padding: 3%;
-        background: rgba(255, 255, 255, 0.5);
-        width: 50%;        
+        background: rgba(255, 255, 255, 0.5);      
     }
     #content h1 {
         margin: 0 0 2% 0;
