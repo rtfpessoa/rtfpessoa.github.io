@@ -1,5 +1,5 @@
 /* Rodrigo Fernandes
-   v1.0 | 20130402
+   v1.0 | 20130406
    Author: mrfyda
    Co-author: rtfpessoa
    License: none (public domain)
@@ -25,17 +25,19 @@ body {
     width: 90%;
 }
 a {
-    color: #f3f3f3;
-    text-decoration: none;
+    color: rgba(65, 65, 65, 1.0);
+    text-decoration: underline;
 }
 img {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
 }
 header {
     margin: 5% 0 0 0;
 }
 nav ul li {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     display: inline-block;
     font-size: 1.5em;
     list-style-type: none;
@@ -59,9 +61,9 @@ nav ul li a:hover {
 #content {
     margin: 5% 0;
     padding: 2%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     width: 50%;
-    text-shadow: 0 0 0.06em #000;
+    text-shadow: 0 0 0.05em #000;
 }
 #content h1,
 #content h2 {
@@ -76,10 +78,11 @@ nav ul li a:hover {
 #content p,
 #content ul li {
     font-size: 1.5em;
+    line-height: 1.2em;
 }
 #content ul li a span {
     position: absolute;
-    margin-top: 0.5em;
+    margin-top: 0.4em;
 }
 .portfolio-item {
     padding: 2%;
@@ -88,7 +91,7 @@ nav ul li a:hover {
     border: 1px solid #aaa;
 }
 footer {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     padding: 1% 1% 0;
     bottom: 0;
     position: fixed;
@@ -108,9 +111,6 @@ footer p {
         margin-bottom: 1%;
         width: 25%;
     }
-    #content {
-        width: 90%;       
-    }    
 }
 @media all and (max-width: 600px) {
     nav ul li {
@@ -124,16 +124,15 @@ footer p {
     }
     #content {
         padding: 5%;
-        background: rgba(255, 255, 255, 0.5);    
+        background: rgba(255, 255, 255, 0.7);    
 		margin-bottom: 17%;
-		width: 90%;
+		width: auto;
     }
     #content h1 {
         margin: 0 0 2% 0;
     }
     .portfolio-item {
         margin: 0;
-        width: auto;
     }
 }
 
