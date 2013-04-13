@@ -64,7 +64,7 @@ nav ul li a:hover {
     margin: 2% 0;
     padding: 2%;
     background: rgba(255, 255, 255, 0.7);
-    width: 50%;
+    width: 50%;;
     text-shadow: 0 0 0.05em #000;
 }
 #content h1,
@@ -137,15 +137,18 @@ footer p {
         margin: 0;
     }
 }
-
 .icon-2x {
     color: #000;
 }
-
+.icon-2x:hover {
+    background-color: #ff6000;
+}
+.contacts ul li a {
+    text-decoration: none;
+}
 .contacts ul li {
     padding: 0.0% 0.5% 0.5% 0.5%;
 }
-
 .contacts ul li a span {
     color: black;
 }
