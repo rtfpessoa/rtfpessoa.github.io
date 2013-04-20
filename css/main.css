@@ -52,10 +52,8 @@ nav ul li.active a{
 nav ul li a {
     color: #000;
     display: block;
-    height: 100%;
     padding: 7%;
     text-decoration: none;
-    width: 100%;
 }
 nav ul li a:hover {
     color: #ff6000;
