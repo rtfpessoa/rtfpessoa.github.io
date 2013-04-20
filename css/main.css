@@ -116,6 +116,7 @@ footer p {
     nav ul li {
         display: block;
         margin-bottom: 2%;
+        max-width: 100%;
         padding: 0.5em;
         width: auto;
     }
@@ -125,8 +126,8 @@ footer p {
     #content {
         padding: 5%;
         background: rgba(255, 255, 255, 0.7);    
-		margin-bottom: 17%;
-		width: auto;
+	margin-bottom: 17%;
+	width: auto;
     }
     #content h1 {
         margin: 0 0 2% 0;
