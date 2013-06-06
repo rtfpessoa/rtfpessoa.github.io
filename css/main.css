@@ -58,29 +58,33 @@ nav ul li a {
 nav ul li a:hover {
     color: #ff6000;
 }
-#content {
+.content {
+    display: none;
     margin: 2% 0;
     padding: 2%;
     background: rgba(255, 255, 255, 0.7);
-    width: 50%;;
+    width: 50%;
     text-shadow: 0 0 0.05em #000;
 }
-#content h1,
-#content h2 {
+.content.active {
+    display: block;
+}
+.content h1,
+.content h2 {
     color: #000;
     font-weight: bold;
     font-size: 2.8em;
     margin: 0 0 2% 0;
 }
-#content h2 {
+.content h2 {
     font-size: 2.0em;
 }
-#content p,
-#content ul li {
+.content p,
+.content ul li {
     font-size: 1.5em;
     line-height: 1.2em;
 }
-#content ul li a span {
+.content ul li a span {
     position: absolute;
     margin-top: 0.4em;
 }
@@ -123,13 +127,13 @@ footer p {
     nav ul li a {
         padding: 0;
     }
-    #content {
+    .content {
         padding: 5%;
         background: rgba(255, 255, 255, 0.7);    
 	margin-bottom: 17%;
 	width: auto;
     }
-    #content h1 {
+    .content h1 {
         margin: 0 0 2% 0;
     }
     .portfolio-item {
@@ -142,12 +146,12 @@ footer p {
 .icon-2x:hover {
     background-color: #ff6000;
 }
-.contacts ul li a {
+#contacts ul li a {
     text-decoration: none;
 }
-.contacts ul li {
+#contacts ul li {
     padding: 0.0% 0.5% 0.5% 0.5%;
 }
-.contacts ul li a span {
+#contacts ul li a span {
     color: black;
 }
