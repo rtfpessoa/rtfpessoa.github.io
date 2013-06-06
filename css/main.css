@@ -146,12 +146,12 @@ footer p {
 .icon-2x:hover {
     background-color: #ff6000;
 }
-.contacts ul li a {
+#contacts ul li a {
     text-decoration: none;
 }
-.contacts ul li {
+#contacts ul li {
     padding: 0.0% 0.5% 0.5% 0.5%;
 }
-.contacts ul li a span {
+#contacts ul li a span {
     color: black;
 }
