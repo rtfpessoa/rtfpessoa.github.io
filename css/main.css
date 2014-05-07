@@ -4,9 +4,10 @@
    Co-author: rtfpessoa
    License: none (public domain)
 */
+
 @import url(reset.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css);
 
 html {
     height: 100%;
@@ -16,14 +17,12 @@ body {
     background-image: url('../images/background.jpg');
     background-position: center right;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
     width: 90%;
-    height: 92%;
+    height: 90%;
+    padding-top: 2%;
 }
 a {
     color: rgba(65, 65, 65, 1.0);
@@ -34,9 +33,6 @@ img {
     margin: 0 auto;
     max-width: 100%;
 }
-header {
-    margin: 2% 0 0 0;
-}
 nav ul li {
     background: rgba(255, 255, 255, 0.7);
     display: inline-block;
@@ -46,7 +42,7 @@ nav ul li {
     max-width: 20%;
     font-weight: bold;
 }
-nav ul li.active a{
+nav ul li.active a {
     color: #ff6000;
 }
 nav ul li a {
@@ -58,19 +54,20 @@ nav ul li a {
 nav ul li a:hover {
     color: #ff6000;
 }
+#experience > ul > li {
+  margin-bottom: 20px;
+}
 .content {
     display: none;
-    margin: 2% 0;
+    margin: 5% 0;
     padding: 2%;
     background: rgba(255, 255, 255, 0.7);
-    width: 50%;
-    text-shadow: 0 0 0.05em #000;
+    width: 65%;
 }
 .content.active {
     display: block;
 }
-.content h1,
-.content h2 {
+.content h1, .content h2 {
     color: #000;
     font-weight: bold;
     font-size: 2.8em;
@@ -79,10 +76,15 @@ nav ul li a:hover {
 .content h2 {
     font-size: 2.0em;
 }
-.content p,
-.content ul li {
+.content p, .content ul li {
     font-size: 1.5em;
     line-height: 1.2em;
+}
+.content ul li p {
+    font-size: 100%;
+}
+strong {
+    font-weight: bold;
 }
 .content ul li a span {
     position: absolute;
@@ -95,13 +97,18 @@ nav ul li a:hover {
     border: 1px solid #aaa;
 }
 footer {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 1% 1% 0;
-    text-align: left;
-    width: 88%;
+    background-color: rgba(255, 255, 255, 0.7);
     bottom: 0;
-    position: fixed;    
-    height: 30px;
+    height: 4%;
+    padding: 1% 1% 0;
+    position: fixed;
+    text-align: right;
+    width: 88%;
+}
+.push {
+    height: 4%;
+    padding: 1% 1% 0;
+    width: 88%;
 }
 footer hr {
     border-color: #aaa;
@@ -120,24 +127,27 @@ footer p {
     nav ul li {
         display: block;
         margin-bottom: 2%;
-        max-width: 100%;
         padding: 0.5em;
         width: auto;
+        min-width: 93%;
+        max-width: 93%;
     }
     nav ul li a {
         padding: 0;
     }
     .content {
+        background-color: rgba(255, 255, 255, 0.7);
         padding: 5%;
-        background: rgba(255, 255, 255, 0.7);    
-	margin-bottom: 17%;
-	width: auto;
+        width: auto;
     }
     .content h1 {
-        margin: 0 0 2% 0;
+        margin: 0 0 8% 0;
     }
     .portfolio-item {
         margin: 0;
+    }
+    footer, .push {
+        height: 8%;
     }
 }
 .icon-2x {
@@ -148,9 +158,6 @@ footer p {
 }
 #contacts ul li a {
     text-decoration: none;
-}
-#contacts ul li {
-    padding: 0.0% 0.5% 0.5% 0.5%;
 }
 #contacts ul li a span {
     color: black;
