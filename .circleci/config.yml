@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/rtfpessoa.xyz
+    steps:
+      - run:
+          name: Deploy
+          working_directory: ~/rtfpessoa.xyz
+          command: |
+            aws s3 sync . s3://rtfpessoa.xyz --exclude='.circleci*' --exclude='.git*' --exclude=README.md --exclude='terraform*' --region eu-west-1
+
+workflows:
+  version: 2
+  deploy-website:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: master
