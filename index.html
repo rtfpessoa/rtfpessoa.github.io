@@ -1,132 +1,282 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='UTF-8'>
-    <title>Rodrigo Fernandes | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en" class="js">
+  <head>
+    <meta charset="utf-8" />
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="css/main.css" media="all" rel="stylesheet" type="text/css" />
+    <meta name="description" content="Rodrigo Fernandes (rtfpessoa)" />
+    <meta name="author" content="Rodrigo Fernandes (rtfpessoa)" />
+    <meta
+      name="keywords"
+      content="rodrigo,fernandes,rtfpessoa,software,engineer"
+    />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <title>Rodrigo Fernandes (rtfpessoa)</title>
 
+    <!-- search engine -->
+    <link rel="canonical" href="https://rtfpessoa.xyz" />
+
+    <!-- open graph -->
+    <meta property="og:title" content="Rodrigo Fernandes (rtfpessoa)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Rodrigo Fernandes (rtfpessoa)" />
+    <meta property="og:url" content="https://rtfpessoa.xyz" />
+    <meta property="og:site_name" content="rtfpessoa" />
+
+    <!-- external stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-78351861-1"
+    ></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-78351861-1', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-78351861-1");
     </script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row bg-dark">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg w-100">
+          <div class="container">
+            <span class="navbar-brand face"></span>
+            <span class="navbar-brand mb-0 h1"
+              >Rodrigo Fernandes (rtfpessoa)</span
+            >
+
+            <ul class="navbar-nav nav ml-auto">
+              <li class="nav-item mr-3">
+                <a href="https://twitter.com/rtfpessoa"
+                  ><i
+                    class="fab fa-twitter"
+                    style="font-size: 2em; color: #fff"
+                  ></i
+                ></a>
+              </li>
+              <li class="nav-item mr-3">
+                <a href="https://github.com/rtfpessoa"
+                  ><i
+                    class="fab fa-github"
+                    style="font-size: 2em; color: #fff"
+                  ></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="https://gitlab.com/rtfpessoa"
+                  ><i
+                    class="fab fa-gitlab"
+                    style="font-size: 2em; color: #fff"
+                  ></i
+                ></a>
+              </li>
             </ul>
+          </div>
         </nav>
-    </header>
-    <div id="home" class="content active">
-        <h1>Welcome to my web page,</h1>
-        <br>
-        <p>Here you can find more about who I am and what I do.</p>
-        <br>
-        <p>If you want to reach me, just try any of my contacts.</p>
+      </div>
     </div>
-    <div id="about" class="content">
-        <p>My name is Rodrigo Fernandes, I grew up in a little village in the middle of Portugal.</p>
-        <p>When I was 17, I moved to Lisbon to start my Master degree (MSc) in
-          Information Systems and Computer Engineering at Instituto Superior Técnico (IST), Lisboa.</p>
-        <br>
-        <p>I like programming, listen to (almost) every genre of music, play Futsal,
-          play table tennis, take long walks, do geocaching and hang out with my friends.</p>
-        <br>
-        <p>I'm a happy, sometimes shy, other times crazy, computer geek.</p>
-    </div>
-    <div id="experience" class="content">
-        <h2>Programming Skills</h2>
-        <p>I earned some skills, during my degree, in C, C++, Java, C#, and SQL.</p>
-        <p>Also developed using Scheme, Assembly, Prolog and Lisp.</p>
-        <p>Now, I mainly write Scala either for living or for fun.</p>
-        <p>I have a main personal project, <a href="https://diff2html.xyz">diff2html</a>,
-          written in Javascript, which is a Node module to parse diffs and generate pretty html.</p>
-        <p>I have also developed using Ruby, Python and PHP (sometimes I also write HTML and CSS).</p>
-        <br>
-        <br>
-        <h2>Experience</h2>
-        <ul>
-            <li>
-              <p><strong>07/2012 - 09/2012</strong>, Summer internship @ <a href="https://www.inov.pt/index_e.php">inov/INESC-ID</a></p>
-              <p>Develop a Wordpress page with plugins to manage the research group activity.</p>
-            </li>
-            <li><strong>07/2013 - present</strong>, Software Engineer @ <a href="https://www.codacy.com/">Codacy</a></li>
-        </ul>
-        <br>
-        <br>
-        <h2>Projects</h2>
-        <ul>
-            <li>2011-2013, Admin and Developper at <a href="https://www.miuiportugal.pt/">MIUI Portugal</a></li>
-            <li>2014-present, Creator and Maintainer of <a href="https://diff2html.xyz">diff2html</a></li>
-        </ul>
-    </div>
-    <div id="portfolio" class="content">
-        <div class="portfolio-item">
-            <h2>diff2html [2014-present]</h2>
-            <br>
-            <p>Diff parser and pretty html generator.</p>
-            <br>
-            <a href="https://diff2html.xyz">
-                <img src="images/diff2html.png" alt="diff2html.xyz" />
-            </a>
+    <div class="container">
+      <section id="about">
+        <div class="row mt-3">
+          <div class="col-12">
+            <p>I'm Rodrigo Fernandes, a software engineer based in Lisbon.</p>
+            <p>
+              I mostly develop software in Scala, love functional programming
+              and during my free time I like to contribute to open source
+              software while listening to some nice music.
+            </p>
+          </div>
         </div>
-            <div class="portfolio-item">
-                <h2>dsinov.com [2012]</h2>
-                <br>
-                <p>A web page to present the research group activity.</p>
-                <br>
-                <a href="https://www.dsinov.com">
-                    <img src="images/dsinov.jpg" alt="dsinov.com" />
-                </a>
+      </section>
+
+      <hr />
+
+      <section id="projects">
+        <div class="row mt-3">
+          <div class="col"><h3>Projects</h3></div>
+        </div>
+        <div class="row">
+          <div class="media col-lg-4">
+            <a href="https://github.com/rtfpessoa/dependency_spy"
+              ><img class="mr-3" src="./imgs/depspy.png" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a href="https://github.com/rtfpessoa/dependency_spy"
+                  >dependency_spy</a
+                >
+              </h5>
+              Find known vulnerabilities in your dependencies.
             </div>
+          </div>
+          <div class="media col-lg-4">
+            <a href="https://github.com/rtfpessoa/yavdb"
+              ><img class="mr-3" src="./imgs/yavdb.png" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a href="https://github.com/rtfpessoa/yavdb">yavdb</a>
+              </h5>
+              Yet Another Vulnerability Database.
+            </div>
+          </div>
+          <div class="media col-lg-4">
+            <a href="https://diff2html.xyz"
+              ><img class="mr-3" src="./imgs/d2h.png" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a href="https://diff2html.xyz">diff2html</a>
+              </h5>
+              Diff parser and pretty html generator.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="media col-lg-4">
+            <a
+              href="https://github.com/rtfpessoa/teamcity-aws-elasticbeanstalk-plugin"
+              ><img class="mr-3" src="./imgs/tc.jpg" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a
+                  href="https://github.com/rtfpessoa/teamcity-aws-elasticbeanstalk-plugin"
+                  >teamcity-aws-elasticbeanstalk-plugin</a
+                >
+              </h5>
+              Teamcity AWS Elastic Beanstalk plugin.
+            </div>
+          </div>
+          <div class="media col-lg-4">
+            <a href="https://github.com/rtfpessoa/bitbucket-scala-client"
+              ><img class="mr-3" src="./imgs/bb.png" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a href="https://github.com/rtfpessoa/bitbucket-scala-client"
+                  >bitbucket-scala-client</a
+                >
+              </h5>
+              Scala library to communicate with the Bitbucket Cloud API.
+            </div>
+          </div>
+          <div class="media col-lg-4">
+            <a href="https://github.com/rtfpessoa/stash-scala-client"
+              ><img class="mr-3" src="./imgs/stash.png" width="60px"
+            /></a>
+            <div class="media-body">
+              <h5 class="mt-0">
+                <a href="https://github.com/rtfpessoa/stash-scala-client"
+                  >stash-scala-client</a
+                >
+              </h5>
+              Scala library to communicate with the Bitbucket Server (a.k.a.
+              Stash) API.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="articles">
+        <div class="row mt-3">
+          <div class="col"><h3>Articles</h3></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul style="list-style: none; padding: 0;">
+              <li>
+                <span>
+                  <a
+                    href="https://www.codacy.com/blog/scala-faster-and-slimmer-with-graalvm/"
+                    ><span class="h5"
+                      >Scala – faster and slimmer with GraalVM</span
+                    ></a
+                  >
+                  <p>Codacy Blog - 6 of November 2018</p>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <a href="https://www.codacy.com/blog/sbt-the-easy-way/"
+                    ><span class="h5">SBT - The easy way</span></a
+                  >
+                  <p>Codacy Blog - 20 of May 2015</p>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="presentations">
+        <div class="row mt-3">
+          <div class="col"><h3>Presentations</h3></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul style="list-style: none; padding: 0;">
+              <li>
+                <span>
+                  <a
+                    href="https://www.slideshare.net/rtfpessoa/playframework-anatomy-of-a-play-application-codacy"
+                    ><span class="h5"
+                      >PlayFramework - Anatomy of a play application @
+                      Codacy</span
+                    ></a
+                  >
+                  <p>Scala Portugal Meetup - 20 of February 2015</p>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
-    <div id="contacts" class="content">
-        <ul>
-            <li>Email</li>
-            <li>
-                <a href="mailto:rodrigo.fernandes@tecnico.ulisboa.pt"><i class="fa fa-envelope fa-5"></i></a>
-            </li>
-            <li>
-                <br>
-            </li>
-            <li>Social</li>
-            <li>
-                <a href="https://www.twitter.com/rtfpessoa"><i class="fa fa-twitter fa-5"></i></a>
-                <a href="https://www.linkedin.com/in/rtfpessoa"><i class="fa fa-linkedin fa-5"></i></a>
-            </li>
-            <li>
-                <br>
-            </li>
-            <li>Skype</li>
-            <li><a href="skype:rtfpessoa?chat"><i class="fa fa-skype fa-5"></i></a></li>
-            <li>
-                <br>
-            </li>
-            <li>Code repositories</li>
-            <li>
-                <a href="https://github.com/rtfpessoa"><i class="fa fa-github fa-5"></i></a>
-                <a href="https://bitbucket.org/rtfpessoa"><i class="fa fa-bitbucket fa-5"></i></a>
-                <a href="https://gitlab.org/rtfpessoa"><i class="fa fa-gitlab fa-5"></i></a>
-            </li>
-        </ul>
-    </div>
-    <div class="push"></div>
-    <footer>
-        <p>© Copyright 2014 Rodrigo Fernandes. All rights reserved.</p>
-    </footer>
-</body>
+
+    <!-- General JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

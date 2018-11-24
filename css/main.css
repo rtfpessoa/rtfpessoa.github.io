@@ -1,164 +1,19 @@
-/* Rodrigo Fernandes
-   v1.0 | 20130406
-   Author: mrfyda
-   Co-author: rtfpessoa
-   License: none (public domain)
-*/
-
-@import url(reset.css);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css);
-
-html {
-    height: 100%;
+.face {
+  float: left;
+  margin-right: 13px;
+  margin-top: 0px;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  background-image: url(../imgs/profile.jpg);
 }
-body {
-    background-attachment: fixed;
-    background-image: url('../images/background.jpg');
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0 auto;
-    width: 90%;
-    height: 90%;
-    padding-top: 2%;
-}
+
 a {
-    color: rgba(65, 65, 65, 1.0);
-    text-decoration: underline;
+  color: #006ab2 !important;
 }
-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
-nav ul li {
-    background: rgba(255, 255, 255, 0.7);
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    min-width: 15%;
-    max-width: 20%;
-    font-weight: bold;
-}
-nav ul li.active a {
-    color: #ff6000;
-}
-nav ul li a {
-    color: #000;
-    display: block;
-    padding: 7%;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    color: #ff6000;
-}
-#experience > ul > li {
-  margin-bottom: 20px;
-}
-.content {
-    display: none;
-    margin: 5% 0;
-    padding: 2%;
-    background: rgba(255, 255, 255, 0.7);
-    width: 65%;
-}
-.content.active {
-    display: block;
-}
-.content h1, .content h2 {
-    color: #000;
-    font-weight: bold;
-    font-size: 2.8em;
-    margin: 0 0 2% 0;
-}
-.content h2 {
-    font-size: 2.0em;
-}
-.content p, .content ul li {
-    font-size: 1.5em;
-    line-height: 1.2em;
-}
-.content ul li p {
-    font-size: 100%;
-}
-strong {
-    font-weight: bold;
-}
-.content ul li a span {
-    position: absolute;
-    margin-top: 0.4em;
-}
-.portfolio-item {
-    padding: 2%;
-}
-.portfolio-item img {
-    border: 1px solid #aaa;
-}
-footer {
-    background-color: rgba(255, 255, 255, 0.7);
-    bottom: 0;
-    height: 4%;
-    padding: 1% 1% 0;
-    position: fixed;
-    text-align: right;
-    width: 88%;
-}
-.push {
-    height: 4%;
-    padding: 1% 1% 0;
-    width: 88%;
-}
-footer hr {
-    border-color: #aaa;
-    border-style: dashed;
-}
-footer p {
-    font-size: 0.9em;
-}
-@media all and (max-width: 1200px) {
-    nav ul li {
-        margin-bottom: 1%;
-        width: 25%;
-    }
-}
-@media all and (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 2%;
-        padding: 0.5em;
-        width: auto;
-        min-width: 93%;
-        max-width: 93%;
-    }
-    nav ul li a {
-        padding: 0;
-    }
-    .content {
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 5%;
-        width: auto;
-    }
-    .content h1 {
-        margin: 0 0 8% 0;
-    }
-    .portfolio-item {
-        margin: 0;
-    }
-    footer, .push {
-        height: 8%;
-    }
-}
-.icon-2x {
-    color: #000;
-}
-.icon-2x:hover {
-    background-color: #ff6000;
-}
-#contacts ul li a {
-    text-decoration: none;
-}
-#contacts ul li a span {
-    color: black;
+
+.media {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
