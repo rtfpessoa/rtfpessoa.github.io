@@ -56,6 +56,30 @@ resource "aws_route53_record" "www_domain" {
   }
 }
 
+resource "aws_route53_record" "d2h_domain" {
+  zone_id = "${var.hosted_zone_id}"
+  name    = "${local.d2h_domain}"
+  type    = "A"
+
+  alias {
+    name                   = "${aws_cloudfront_distribution.d2h_cdn.domain_name}"
+    zone_id                = "${aws_cloudfront_distribution.d2h_cdn.hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "d2h_short_domain" {
+  zone_id = "${var.hosted_zone_id}"
+  name    = "${local.d2h_short_domain}"
+  type    = "A"
+
+  alias {
+    name                   = "${aws_cloudfront_distribution.d2h_cdn.domain_name}"
+    zone_id                = "${aws_cloudfront_distribution.d2h_cdn.hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
+
 resource "aws_route53_record" "cert_validation" {
   zone_id = "${var.hosted_zone_id}"
   name    = "${aws_acm_certificate.cert.domain_validation_options.0.resource_record_name}"
@@ -75,6 +99,11 @@ locals {
   s3_origin_id     = "S3-${var.domain}"
   s3_www_origin_id = "S3-www-${var.domain}"
   www_domain       = "www.${var.domain}"
+
+  s3_d2h_origin_id    = "S3-d2h-${var.domain}"
+  d2h_domain          = "diff2html.${var.domain}"
+  d2h_short_domain    = "d2h.${var.domain}"
+  d2h_external_domain = "diff2html.xyz"
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
@@ -184,6 +213,70 @@ resource "aws_cloudfront_distribution" "www_cdn" {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "${local.s3_www_origin_id}"
+
+    forwarded_values {
+      query_string = true
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 31536000
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  price_class = "PriceClass_All"
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+      locations        = []
+    }
+  }
+
+  viewer_certificate {
+    acm_certificate_arn      = "${aws_acm_certificate_validation.cert.certificate_arn}"
+    minimum_protocol_version = "TLSv1.1_2016"
+    ssl_support_method       = "sni-only"
+  }
+}
+
+resource "aws_s3_bucket" "d2h_site" {
+  bucket = "${local.d2h_domain}"
+  acl    = "public-read"
+
+  website {
+    redirect_all_requests_to = "https://${local.d2h_external_domain}"
+  }
+}
+
+resource "aws_cloudfront_distribution" "d2h_cdn" {
+  origin {
+    origin_id   = "${local.s3_d2h_origin_id}"
+    domain_name = "${aws_s3_bucket.d2h_site.website_endpoint}"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1.1", "TLSv1.2"]
+    }
+  }
+
+  # If using route53 aliases for DNS we need to declare it here too, otherwise we'll get 403s.
+  aliases = ["${local.d2h_domain}", "${local.d2h_short_domain}"]
+
+  enabled         = true
+  is_ipv6_enabled = true
+
+  default_cache_behavior {
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = "${local.s3_d2h_origin_id}"
 
     forwarded_values {
       query_string = true
