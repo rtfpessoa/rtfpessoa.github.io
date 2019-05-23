@@ -5,6 +5,7 @@ jobs:
       enabled: true
     working_directory: ~/rtfpessoa.xyz
     steps:
+      - checkout
       - run:
           name: Deploy
           working_directory: ~/rtfpessoa.xyz
